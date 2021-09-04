@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "a simple app for searching for current weather conditions and 5 day forecasts",
   "main": "script.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "dotenv": "^10.0.0"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
