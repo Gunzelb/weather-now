@@ -1,5 +1,4 @@
-require("dotenv").config();
-
+var API_KEY = "2dcc9b82cb61cd0351ef6ccf285ad2a3";
 var current = $("#currentDay");
 var dateElement = $(".date");
 var fiveDayDiv = $("#fiveDayDiv");
@@ -85,7 +84,7 @@ function renderFiveDay(day, temp, wind, humid, icon) {
 async function locationApiCall(city) {
   try {
     await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
     )
       .then((response) => {
         if (!response.ok) {
@@ -111,7 +110,7 @@ async function locationApiCall(city) {
 async function oneWeatherAPI(lon, lat, city) {
   try {
     await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&units=imperial&appid=${process.env.API_KEY}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&units=imperial&appid=${API_KEY}`
     )
       .then((response) => {
         if (!response.ok) {
